@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+/* Force Light Beach-Sand / Warm Yellow Theme styling across all elements */
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #fdfaf2 !important;
+  color: #3b1e04 !important; /* text-amber-950/deep-brown */
+  font-family: "Inter", sans-serif;
+}
+
+/* Transform all dark layouts to official light sand beach glass cards */
+[class*="bg-slate-950"], 
+[class*="bg-slate-900"],
+[class*="bg-[#020617]"],
+[class*="bg-[#0b1329]"],
+[class*="bg-[#111827]"] {
+  background-color: rgba(255, 253, 245, 0.82) !important;
+  color: #3b1e04 !important;
+  border-color: rgba(217, 119, 6, 0.28) !important;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.04), 
+              0 1px 2px rgba(180, 83, 9, 0.02),
+              inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+[class*="bg-slate-900/30"],
+[class*="bg-slate-900/40"],
+[class*="bg-slate-950/40"],
+[class*="bg-slate-950/20"],
+[class*="bg-slate-900/50"] {
+  background-color: rgba(254, 251, 239, 0.65) !important;
+  color: #3b1e04 !important;
+  border-color: rgba(217, 119, 6, 0.2) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85) !important;
+}
+
+[class*="bg-slate-950/60"],
+[class*="bg-slate-950/80"] {
+  background-color: rgba(254, 251, 239, 0.85) !important;
+}
+
+/* text recoloring for dark-theme utilities to rich amber/brown */
+[class*="text-slate-400"],
+[class*="text-slate-500"],
+[class*="text-gray-400"],
+[class*="text-gray-500"] {
+  color: #78350f !important; /* amber-800 */
+}
+
+[class*="text-slate-300"],
+[class*="text-gray-300"] {
+  color: #5c2d0c !important; /* warm brown */
+}
+
+[class*="text-slate-100"],
+[class*="text-slate-200"],
+[class*="text-white"],
+[class*="text-gray-100"],
+[class*="text-gray-200"] {
+  color: #3b1e04 !important; /* text-amber-950 */
+}
+
+/* Style borders into warm sand tones */
+[class*="border-slate-800"],
+[class*="border-slate-700"],
+[class*="border-slate-900"],
+[class*="border-gray-800"],
+[class*="border-gray-700"] {
+  border-color: rgba(217, 119, 6, 0.22) !important;
+}
+
+/* Re-color neon accents to official high-contrast gold/amber */
+[class*="text-cyan-400"],
+[class*="text-blue-400"],
+[class*="text-indigo-400"],
+[class*="text-cyan-300"] {
+  color: #b45309 !important; /* amber-700 */
+}
+
+[class*="bg-cyan-950/40"],
+[class*="bg-cyan-950/30"],
+[class*="bg-cyan-500/10"],
+[class*="bg-cyan-500/20"],
+[class*="bg-blue-950/40"],
+[class*="bg-blue-950/30"] {
+  background-color: rgba(254, 243, 199, 0.75) !important; /* amber-100 */
+  color: #78350f !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+[class*="text-cyan-500"],
+[class*="text-blue-500"] {
+  color: #d97706 !important; /* amber-600 */
+}
+
+[class*="border-cyan-500/30"],
+[class*="border-cyan-500/20"],
+[class*="border-blue-500/20"] {
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Recolor status indicators like Resolved, In Progress, Success */
+[class*="text-emerald-400"] {
+  color: #047857 !important; /* emerald-700 */
+}
+[class*="bg-emerald-950/20"],
+[class*="bg-emerald-950/40"] {
+  background-color: rgba(209, 250, 229, 0.7) !important;
+  border-color: rgba(52, 211, 153, 0.4) !important;
+}
+
+[class*="text-rose-400"],
+[class*="text-red-400"] {
+  color: #b91c1c !important; /* red-700 */
+}
+[class*="bg-rose-950/20"],
+[class*="bg-rose-950/40"],
+[class*="bg-red-950/20"] {
+  background-color: rgba(254, 226, 226, 0.7) !important;
+  border-color: rgba(248, 113, 113, 0.4) !important;
+}
+
+[class*="text-amber-400"] {
+  color: #b45309 !important; /* amber-700 */
+}
+[class*="bg-amber-950/20"],
+[class*="bg-amber-950/40"] {
+  background-color: rgba(254, 243, 199, 0.7) !important;
+  border-color: rgba(251, 191, 36, 0.4) !important;
+}
+
+/* Fix forms/inputs to look amazing with sand-beige 3D effects */
+input, select, textarea {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  color: #3b1e04 !important;
+  border: 1px solid rgba(217, 119, 6, 0.3) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 0.75rem !important;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.03) !important;
+  transition: all 0.2s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #b45309 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15), inset 0 1px 2px rgba(0,0,0,0.03) !important;
+}
+
+/* Beautiful official 3D button styling */
+button, [role="button"] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modals glassmorphism backdrop */
+[class*="fixed inset-0 bg-slate-950/80"],
+[class*="fixed inset-0 bg-black/80"],
+[class*="fixed inset-0 bg-black/50"],
+[class*="fixed inset-0 bg-slate-950/50"] {
+  background-color: rgba(69, 26, 3, 0.35) !important; /* Warm dark-amber translucent backdrop */
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Custom 3D card style for prominent elements */
+.card-3d-govement {
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(254,251,239,0.75) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.05),
+              0 1px 3px rgba(217, 119, 6, 0.02),
+              inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+/* Rechart details styling */
+.recharts-default-tooltip {
+  background-color: #fffdf6 !important;
+  border: 1px solid #f59e0b !important;
+  color: #3b1e04 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(120,53,15,0.08) !important;
+}
+
+.recharts-legend-item-text {
+  color: #78350f !important;
+}
+
+/* Styled scrollbar for official look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #f1e6cc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e3d2ab;
+}
+
+/* Custom premium wave-bubble shaking spring animations */
+@keyframes bubble-wave {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(0.95) rotate(-0.5deg);
+  }
+  30% {
+    transform: scale(1.03) rotate(1deg);
+  }
+  45% {
+    transform: scale(0.97) rotate(-1deg);
+  }
+  60% {
+    transform: scale(1.01) rotate(0.5deg);
+  }
+  75% {
+    transform: scale(0.99) rotate(-0.2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.bubble-shake-hover {
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.bubble-shake-hover:hover {
+  background-color: rgba(217, 119, 6, 0.06) !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+  color: #5c2d0c !important;
+  transform: translateY(-1.5px) scale(1.01);
+  box-shadow: 0 4px 10px rgba(180, 83, 9, 0.05);
+}
+
+.bubble-shake-hover:active {
+  animation: bubble-wave 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.15) !important;
+}
+
+

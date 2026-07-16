@@ -1,0 +1,6 @@
+{
+  "name": "AquaSetu",
+  "description": "Explainable Multi-Agent Decision Intelligence Platform for Adaptive Canal Water Allocation",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
